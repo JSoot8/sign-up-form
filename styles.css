@@ -3,6 +3,10 @@
     src: url('fonts/Norse-Bold.otf') format('opentype');
 }
 
+:root {
+    --base-font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +14,7 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--base-font);
     background-color: rgb(30, 30, 30);
 }
 
@@ -22,8 +26,8 @@ body {
 }
 
 aside {
+    flex: 2;
     position: relative;
-    width: 40%;
     background: url(images/halie-west-25xggax4bSA-unsplash.jpg) center / cover no-repeat;
     padding-top: 13em;
 }
@@ -43,7 +47,7 @@ aside {
     font-size: 3rem;
     display: flex;
     align-items: center;
-    font-family: 'Norse Bold', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Norse Bold', var(--base-font);
 }
 
 .logo > img {
@@ -73,6 +77,18 @@ figcaption > a:visited{
 }
 
 main {
-    width: 60%;
-    background-color: white;
+    flex: 3;
+    background-color: rgb(245, 245, 245);
+    padding-top: 11em;
+}
+
+.form-header {
+    font-size: 1.3rem;
+    font-weight: 600;
+    max-width: 60ch;
+    padding: 0 2em 1em;
+}
+
+.form-header > p {
+    padding-bottom: 1em;
 }
