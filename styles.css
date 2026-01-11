@@ -4,8 +4,9 @@
 }
 
 :root {
-    --base-font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --base-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     --main-padding-x: 2.6rem;
+    --ARMY-GREEN: #4E5b31;
 }
 
 * {
@@ -15,7 +16,7 @@
 }
 
 body {
-    font-family: var(--base-font);
+    font-family: var(--base-font-family);
     background-color: rgb(30, 30, 30);
 }
 
@@ -48,7 +49,7 @@ aside {
     font-size: 3rem;
     display: flex;
     align-items: center;
-    font-family: 'Norse Bold', var(--base-font);
+    font-family: 'Norse Bold', var(--base-font-family);
 }
 
 .logo > img {
@@ -101,6 +102,12 @@ main {
     padding: 1em var(--main-padding-x);
 }
 
+form h2 {
+    font-size: inherit;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
 .form-inputs {
     display: flex;
     flex-wrap: wrap;
@@ -130,10 +137,37 @@ main {
     height: 30px;
 }
 
-form h2 {
-    font-size: inherit;
+.form-actions {
+    padding: 1.5em var(--main-padding-x) 2em;
+}
+
+.form-actions > button[type='submit'] {
+    border: none;
+    border-radius: 8px;
+    background-color: var(--ARMY-GREEN);
+    color: white;
+    padding: 0.8em 3em;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.form-actions > button[type='submit']:active {
+    box-shadow: none;
+}
+
+.login-prompt {
+    padding: 0 var(--main-padding-x);
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+}
+
+.login-prompt > a:link,
+.login-prompt > a:visited {
+    color: var(--ARMY-GREEN);
+    text-decoration: none;
 }
 
 .sr-only {
