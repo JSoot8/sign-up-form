@@ -133,6 +133,11 @@ form h2 {
     letter-spacing: 2px;
 }
 
+.input-container:has(input[required]) label::after {
+    content: '*';
+    color: red;
+}
+
 .input-container input {
     padding: 0.3em 0.6em;
     font-size: 1rem;
@@ -185,6 +190,16 @@ form h2 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.input-container .invalid {
+    border: solid 1px crimson;
+}
+
+.error-msg {
+    font-size: 1rem;
+    color: crimson;
+    white-space: pre-line;
 }
 
 @media (max-width: 800px) {
